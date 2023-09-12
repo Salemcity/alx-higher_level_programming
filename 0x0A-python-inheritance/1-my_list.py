@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-contains inheritance list class MyList.
+contains MyList class
 """
 class MyList(list):
     """a subclass of list"""

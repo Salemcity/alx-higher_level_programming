@@ -33,11 +33,6 @@ Test that MyList inherits from list:
 	 >>> issubclass(MyList, list)
 	 True
 
-Test for empty list:
-	 >>> l = MyList()
-	 >>> l.print_sorted()
-	 []
-
 success case:
 
 >>> my_list = MyList()
@@ -84,11 +79,19 @@ To test  all negative numbers:
 	 >>> l.append(-2)
 	 >>> l.append(-8)
 	 >>> print(l)
-	 [-10, -5, -7, -2, -8]
+	 [-10, -1, -7, -2, -8]
 	 >>> l.print_sorted()
-	 [-10, -8, -7, -2, -5]
+	 [-10, -8, -7, -2, -1]
 	 >>> print(l)
-         [-10, -5, -7, -2, -8]
+         [-10, -1, -7, -2, -8]
+
+Test case to add a new list:
+
+>>> a = [1, 9, 5, 4, 22, 8, 13]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 5, 8, 9, 13, 22]
+>>>
 
 Check case list with unknown attribute
 
