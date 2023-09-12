@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-
 """
-This Contains the lookup function that returs the attributes and methods 
-of an object
+This Contains the lookup function that returns the attributes
+and methods of an object
 """
 
 
