@@ -1,0 +1,71 @@
+Test from MyList class
+
+Import files 
+
+>>> MyList = __import__('1-my_list').MyList
+>>>
+
+success case:
+
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>>
+
+Fail case not defined object:
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list2.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'my_list2' is not defined
+>>>
+
+To test reversed order list:
+	 >>> l = MyList()
+	 >>> l.append(4)
+	 >>> l.append(3)
+	 >>> l.append(2)
+	 >>> l.append(1)
+	 >>> print(l)
+	 [4, 3, 2, 1]
+	 >>> l.print_sorted()
+	 [1, 2, 3, 4]
+	 >>> print(l)
+	 [4, 3, 2, 1]
+
+To test  all negative numbers:
+	 >>> l = MyList()
+	 >>> l.append(-10)
+	 >>> l.append(-5)
+	 >>> l.append(-7)
+	 >>> l.append(-2)
+	 >>> l.append(-8)
+	 >>> print(l)
+	 [-10, -5, -7, -2, -8]
+	 >>> l.print_sorted()
+	 [-10, -8, -7, -2, -5]
+	 >>> print(l)
+         [-10, -5, -7, -2, -8]
+
+Check case list with unknown attribute
+
+>>> my_list = [1, 2, 3]
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'print_sorted'
+>>>
+
+
+End all test case.
