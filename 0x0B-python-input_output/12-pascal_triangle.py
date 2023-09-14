@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Defining a function of a Pascal's Triangle."""
 
 
@@ -18,4 +19,3 @@ def pascal_triangle(n):
         tmp.append(1)
         triangles.append(tmp)
     return triangles
-
