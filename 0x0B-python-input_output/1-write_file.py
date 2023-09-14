@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defining  a write__file function."""
+"""Defining  a write_file function."""
 
 
 def write_file(filename="", text=""):
