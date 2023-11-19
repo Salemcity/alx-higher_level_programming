@@ -1,28 +1,27 @@
 #!/usr/bin/python3
-"""
-A script that lists all states with a name from the 
-database`hbtn_0e_0_usa`
-"""
-
-import MySQLdb
-
-from sys import argv
+""" List states starting with N from database """
 
 
 if __name__ == '__main__':
-    """
-    Get access to the database and execute the querry that
-    will fetch all data from the 'states' table
-    """
-    db = MySQLdb.connect(
-        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
 
-    cur = db.cursor()
+    from sys import argv
+    import MySQLdb
 
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%'\
-        ORDER BY id ASC")
+    db_user = argv[1]
+    db_passwd = argv[2]
+    db_name = argv[3]
 
-    rows = cur.fetchall()
+    database = MySQLdb.connect(host='localhost',
+                               port=3306,
+                               user=db_user,
+                               passwd=db_passwd,
+                               db=db_name)
 
-    for row in rows:
-        print(row)
+    cursor = database.cursor()
+
+    cursor.execute('SELECT id, name FROM states\
+                   ORDER BY states.id ASC')
+
+    for row in cursor.fetchall():
+        if row[1][0] == 'N':
+            print(row)
